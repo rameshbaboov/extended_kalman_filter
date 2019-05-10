@@ -22,7 +22,7 @@ This project was done in Ubuntu 18 LTS and following are the components
 
 This project is the output from the Simulator on data set 1
 
-![img][img/1.jpg]
+![img] (img/1.jpg)
 ![][..img/2.jpg]
 ![][..img/3.jpg]
 ![][..img/4.jpg]
