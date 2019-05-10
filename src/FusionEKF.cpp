@@ -29,8 +29,8 @@ FusionEKF::FusionEKF() {
   // set matrices to values
   ekf_.P_ << 1,0,0,0,
 		0,1,0,0,
-		0,0,100,0,
-		0,0,0,100;
+		0,0,1000,0,
+		0,0,0,1000;
 
   H_laser_ <<1,0,0,0,
              0,1,0,0;
@@ -76,6 +76,9 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 	
 	
     if (measurement_pack.sensor_type_ == MeasurementPackage::RADAR) {
+	// added for debug
+	//return;
+	//added for debug	
       cout << "initializing RADAR measurement with first measurement" << endl;
 	  /**
       Convert radar from polar to cartesian coordinates and initialize state.
@@ -97,6 +100,9 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 	  
     }
     else if (measurement_pack.sensor_type_ == MeasurementPackage::LASER) {
+     // added for debug
+	//return;
+	//added for debug	
       /**
       Initialize state.
       */
@@ -123,6 +129,11 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
      * Use noise_ax = 9 and noise_ay = 9 for your Q matrix.calculate FT
 
    */
+	// cde added for debug
+	// if (measurement_pack.sensor_type_ == MeasurementPackage::LASER) { return;}
+	// if (measurement_pack.sensor_type_ == MeasurementPackage::RADAR) { return;}
+	//code added for dbug
+        
 	//compute the time elapsed between the current and previous measurements
 	float dt = (measurement_pack.timestamp_ - previous_timestamp_) / 1000000.0;	//dt - expressed in seconds
 	previous_timestamp_ = measurement_pack.timestamp_;

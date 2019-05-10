@@ -34,7 +34,7 @@ void KalmanFilter::Predict() {
   cout << "calculate FT" << endl ;
   MatrixXd FT = F_.transpose();
   cout << "CALCULATE P" << endl ;
-  P_ = P_ * FT * P_ + Q_;
+  P_ = F_ * P_ * FT + Q_;
   cout << "END prediction: Kalman filter prediction" << endl ;
 
 }
