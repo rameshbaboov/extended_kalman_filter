@@ -68,8 +68,7 @@ file the simulator uses for Dataset 1.                         truth data. Your 
 The RMSE is within the limits. Please refer to the video or rmse.csv. RMSE.CSV was extracted from the output log run-output-dataset1.log. Though first few set of rmse are above limit, quickly the model converges the error to smaller no as shown below. Below is the last few rmse
 
 '''
-{rmse_x:0.0978198 rmse_Y:0.0858336 rmse_vx:0.459799 rmse_vY:0.446953 },1
-{rmse_x:0.0979508 rmse_Y:0.0860281 rmse_vx:0.459411 rmse_vY:0.4471 },1
+{rmse_x:0.0978198 rmse_Y:0.0858336 rmse_vx:0.459799 rmse_vY:0.446953 },1                                                          {rmse_x:0.0979508 rmse_Y:0.0860281 rmse_vx:0.459411 rmse_vY:0.4471 },1
 {rmse_x:0.0979405 rmse_Y:0.0860024 rmse_vx:0.458931 rmse_vY:0.44682 },1
 {rmse_x:0.0979423 rmse_Y:0.0860124 rmse_vx:0.458453 rmse_vY:0.44661 },1
 {rmse_x:0.0979081 rmse_Y:0.0861413 rmse_vx:0.457978 rmse_vY:0.446556 },1
