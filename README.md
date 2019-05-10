@@ -67,7 +67,7 @@ file the simulator uses for Dataset 1.                         truth data. Your 
 
 The RMSE is within the limits. Please refer to the video or rmse.csv. RMSE.CSV was extracted from the output log run-output-dataset1.log. Though first few set of rmse are above limit, quickly the model converges the error to smaller no as shown below. Below is the last few rmse
 
-'''
+```
 {rmse_x:0.0978198 rmse_Y:0.0858336 rmse_vx:0.459799 rmse_vY:0.446953 },1
 {rmse_x:0.0979508 rmse_Y:0.0860281 rmse_vx:0.459411 rmse_vY:0.4471 },1
 {rmse_x:0.0979405 rmse_Y:0.0860024 rmse_vx:0.458931 rmse_vY:0.44682 },1
@@ -85,33 +85,14 @@ The RMSE is within the limits. Please refer to the video or rmse.csv. RMSE.CSV w
 {rmse_x:0.0976941 rmse_Y:0.0859251 rmse_vx:0.45395 rmse_vY:0.443142 },1
 {rmse_x:0.0975994 rmse_Y:0.0858527 rmse_vx:0.45351 rmse_vY:0.442696 },1
 {rmse_x:0.097509 rmse_Y:0.0858237 rmse_vx:0.453055 rmse_vY:0.442287 },1
-
-
-
-
-
-                                                          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {rmse_x:0.0974103 rmse_Y:0.0857403 rmse_vx:0.45262 rmse_vY:0.441844 },1
 {rmse_x:0.0974975 rmse_Y:0.0857352 rmse_vx:0.452654 rmse_vY:0.441589 },1
 {rmse_x:0.0976057 rmse_Y:0.0857164 rmse_vx:0.452619 rmse_vY:0.441242 },1
 {rmse_x:0.0975115 rmse_Y:0.0856301 rmse_vx:0.452168 rmse_vY:0.440799 },1
 {rmse_x:0.0974149 rmse_Y:0.0855442 rmse_vx:0.45172 rmse_vY:0.440368 },1
 {rmse_x:0.0973178 rmse_Y:0.0854597 rmse_vx:0.451267 rmse_vY:0.439935 },1
-'''
+```
+
 
 ## Follows the Correct Algorithm
 
@@ -143,8 +124,39 @@ The first measurement is handled to initialize the state vector and covariance m
 separate lines of codes to handle both Radar and Laser. Please refer to line no 59 to 119 in
 FusionEKF.cpp
 
+## Rubric#3
+
+Your Kalman Filter algorithm first predicts then updates.
+
+Upon receiving a measurement after the first, the algorithm should predict object position to the current timestep and then update the prediction using the new measurement.
+
+The Kalman algorithm first predict the object position based on the timestep and then update the prediction using new measurements. Prediction is from line no 120 to 159 and update is from 160 to 201 in FusionEKF.cpp
 
 
+## Rubric#4
+
+Your Kalman Filter can handle radar and lidar measurements.
+
+Your algorithm sets up the appropriate matrices given the type of measurement and calls the correct measurement function for a
+given sensor type.
+
+There are separate codes to handle Radar and lidar and the codes works properly when Radar or Lidar is switched off by toggling comments on line no 132 to 135 and 103 to 105 in FusionEKF.cpp
+
+
+## Rubric#5 - Code Efficiency
+
+Your algorithm should avoid unnecessary calculations
+
+This is mostly a "code smell" test. Your algorithm does not need to sacrifice comprehension, stability, robustness or security for speed, however it should maintain good practice with respect to calculations.
+
+Here are some things to avoid. This is not a complete list, but rather a few examples of inefficiencies.
+• Running the exact same calculation repeatedly when you can run it once, store the value and then reuse the value later.
+• Loops that run too many times.
+• Creating unnecessarily complex data structures when simpler structures work equivalently.
+• Unnecessary control flow checks.
+
+
+The code adheres to all teh above criteria
 
 
 
