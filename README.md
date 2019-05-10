@@ -5,7 +5,7 @@
 This project implements Extended Kalman Filter Algorithm in C++ and tested on Simulator provided by Udacity. The simulator generates RADAR and LIDAR measurements with white noise for the position and velocity of the object. The project is to fusion both these measurements and predict the position using Extended Kalman filter algorithm. The communication between the simulator and the EKF is done using WebSocket using the uWebSockets implementation on the EKF side.
 
 This project utilizes the starter code given by Udacity. Following are the outputs available as outcome of this project
-
+1
 1. Vide0.mp4 – Contains recorded video of the output in the simulator on data set1
 2. Video2.mp4 - Contains recorded video of the output in the simulator on data set2
 2. log files – Log files contain output of cmake and make. Also various values and status are reported through cout in C++ and collected in a separate log file run – output data set1
@@ -21,6 +21,10 @@ This project was done in Ubuntu 18 LTS and following are the components
 ## Ouput:
 
 This project is the output from the Simulator on data set 1
+
+! [][.img/1.jpg]
+
+
 
 ![img] (img/1.jpg)
 ![][..img/2.jpg]
