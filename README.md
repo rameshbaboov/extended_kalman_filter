@@ -24,6 +24,12 @@ This project is the output from the Simulator on data set 1
 
 <img src="https://github.com/rameshbaboov/extended_kalman_filter/blob/master/img/1.JPG"  width="480">
 
+<img src="https://github.com/rameshbaboov/extended_kalman_filter/blob/master/img/2.JPG"  width="480">
+
+<img src="https://github.com/rameshbaboov/extended_kalman_filter/blob/master/img/3.JPG"  width="480">
+
+<img src="https://github.com/rameshbaboov/extended_kalman_filter/blob/master/img/4.JPG"  width="480">
+
 
 ## RUBRICS:
 This project satisfies all the rubric points
