@@ -22,7 +22,7 @@ This project was done in Ubuntu 18 LTS and following are the components
 
 This project is the output from the Simulator on data set 1
 
-<img src="https://github.com/rameshbaboov/extended_kalman_filter/img/1.jpg" width="480">
+<img src="https://github.com/rameshbaboov/extended_kalman_filter/blob/master/img/1.JPG"  width="480">
 
 
 ## RUBRICS:
