@@ -21,7 +21,7 @@ This project was done in Ubuntu 18 LTS and following are the components
 ## Ouput:
 
 This project is the output from the Simulator on data set 1
-![][img/1.jpg]
+![][/img/1.jpg]
 
 ## RUBRICS:
 This project satisfies all the rubric points
